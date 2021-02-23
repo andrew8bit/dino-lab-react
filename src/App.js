@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  // name store variables before return statement 
+  const post = {
+    title: 'Dinosaurs are awesome',
+    author: 'Stealthy Stegosaurus',
+    body: 'Check out this body property!'
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* { can use variables with curley braces } */}
+      <h1>{post.title}</h1>
+      <p>by {post.author}</p>
+      <p>{post.body}</p>
     </div>
   );
 }
